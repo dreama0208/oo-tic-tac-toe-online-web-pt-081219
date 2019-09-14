@@ -48,7 +48,7 @@ class TicTacToe
     end
   end
 
-  def turn(position)
+  def turn
     i = self.input_to_index(position)
     if self.valid_move?(i)
       self.move(i, token)
