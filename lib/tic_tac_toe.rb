@@ -122,5 +122,5 @@ class TicTacToe
   end
 end
 
-TicTacToe.new(board)
+TicTacToe.new
 play
