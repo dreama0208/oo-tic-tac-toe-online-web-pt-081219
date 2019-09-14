@@ -67,7 +67,16 @@ class TicTacToe
   end
 
   def won?
-
+    board_empty = @board.none? {|e| e == "X" || e == "O" }
+    WIN_COMBINATIONS.each { |comb|
+      if @board[comb[0]] == "X" && @board[comb[1]] == "X" && @board[comb[2]] == "X" || @board[comb[0]] == "O" && @board[comb[1]] == "O" && @board[comb[2]] == "O" 
+        return comb
+      else
+        return false
+      end
+    }
+      
+    end
   end
 
   def full?
