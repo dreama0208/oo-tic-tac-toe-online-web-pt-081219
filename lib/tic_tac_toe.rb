@@ -123,4 +123,4 @@ class TicTacToe
 end
 
 a = TicTacToe.new
-@play = play
+@play = a.play
