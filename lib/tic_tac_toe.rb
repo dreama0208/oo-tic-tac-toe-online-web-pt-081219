@@ -49,15 +49,21 @@ class TicTacToe
   end
 
   def turn(position)
-    if self.valid_move?(position)
+    i = self.input_to_index(position)
+    if self.valid_move?(i)
+      self.move(i, token)
       self.display_board
     else
-      self.move
+      self.turn
     end
   end
 
   def turn_count
-
+    count = 0
+    @board.each { |e|
+      if e == "X" || e == "O"
+        count += 1
+    }
   end
 
   def won?
