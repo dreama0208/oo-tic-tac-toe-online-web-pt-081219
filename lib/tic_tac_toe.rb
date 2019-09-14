@@ -122,4 +122,4 @@ class TicTacToe
   end
 end
 
-a = TicTacToe.new("1")
+a = TicTacToe.new(a)
